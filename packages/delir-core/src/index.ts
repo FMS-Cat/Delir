@@ -5,10 +5,10 @@ import * as Values from './Values'
 
 import PreRenderRequest from './Engine/PreRenderingRequest'
 import RenderRequest from './Engine/RenderRequest'
+import Type, { AnyParameterTypeDescriptor, TypeDescriptor } from './PluginSupport/ParamTypeDescriptor'
 import PluginBase from './PluginSupport/plugin-base'
 import PluginRegistry from './PluginSupport/plugin-registry'
 import PostEffectBase from './PluginSupport/PostEffectBase'
-import Type, { AnyParameterTypeDescriptor, TypeDescriptor } from './PluginSupport/type-descriptor'
 
 import * as KeyframeCalcurator from './Engine/KeyframeCalcurator'
 import * as Exporter from './Exporter'

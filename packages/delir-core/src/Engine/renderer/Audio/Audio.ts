@@ -1,8 +1,8 @@
 import * as _ from 'lodash'
 
 import { resampling } from '../../../helper/Audio'
-import Type from '../../../PluginSupport/type-descriptor'
-import { TypeDescriptor } from '../../../PluginSupport/type-descriptor'
+import Type from '../../../PluginSupport/ParamTypeDescriptor'
+import { TypeDescriptor } from '../../../PluginSupport/ParamTypeDescriptor'
 import PreRenderingRequest from '../../PreRenderingRequest'
 import RenderingRequest from '../../RenderRequest'
 import { IRenderer } from '../RendererBase'

@@ -1,8 +1,8 @@
 import PreRenderRequest from '../Engine/PreRenderingRequest'
 import RenderRequest from '../Engine/RenderRequest'
 
+import { ParameterValueTypes, TypeDescriptor } from './ParamTypeDescriptor'
 import PluginBase from './plugin-base'
-import { ParameterValueTypes, TypeDescriptor } from './type-descriptor'
 
 export interface EffectPluginClass {
     new (): EffectPluginBase

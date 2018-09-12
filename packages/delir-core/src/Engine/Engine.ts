@@ -1,6 +1,6 @@
 import { Clip, Effect, Project } from '../Entity'
+import { ParameterValueTypes } from '../PluginSupport/ParamTypeDescriptor'
 import EffectPluginBase from '../PluginSupport/PostEffectBase'
-import { ParameterValueTypes } from '../PluginSupport/type-descriptor'
 
 import { IRenderingStreamObserver, RenderingStatus } from './IRenderingStreamObserver'
 import { IRenderer } from './Renderer/RendererBase'

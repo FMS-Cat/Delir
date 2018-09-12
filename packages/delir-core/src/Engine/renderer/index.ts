@@ -1,4 +1,4 @@
-import { TypeDescriptor } from '../../PluginSupport/type-descriptor'
+import { TypeDescriptor } from '../../PluginSupport/ParamTypeDescriptor'
 import { IRenderer, IRendererStatic } from './RendererBase'
 
 import * as _ from 'lodash'

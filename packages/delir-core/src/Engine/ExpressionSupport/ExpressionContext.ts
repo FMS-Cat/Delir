@@ -1,4 +1,4 @@
-import { ParameterValueTypes } from '../../PluginSupport/type-descriptor'
+import { ParameterValueTypes } from '../../PluginSupport/ParamTypeDescriptor'
 import RenderingRequest from '../RenderRequest'
 import { ExpressionContext } from './ExpressionVM'
 

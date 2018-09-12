@@ -1,7 +1,7 @@
 import * as VM from 'vm'
 import P5Hooks from './P5Hooks'
 
-import Type from '../../../PluginSupport/type-descriptor'
+import Type from '../../../PluginSupport/ParamTypeDescriptor'
 import Expression from '../../../Values/Expression'
 import PreRenderingRequest from '../../PreRenderingRequest'
 import RenderingRequest from '../../RenderRequest'

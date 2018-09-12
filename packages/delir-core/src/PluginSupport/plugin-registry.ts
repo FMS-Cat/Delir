@@ -2,8 +2,8 @@ import * as Joi from 'joi'
 import * as _ from 'lodash'
 import * as semver from 'semver'
 
+import { AnyParameterTypeDescriptor } from './ParamTypeDescriptor'
 import EffectPluginBase from './PostEffectBase'
-import { AnyParameterTypeDescriptor } from './type-descriptor'
 import { DelirPluginPackageJson, PluginEntry, PluginSummary } from './types'
 
 import PluginAssertionFailedException from '../exceptions/plugin-assertion-failed-exception'
