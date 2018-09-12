@@ -282,7 +282,7 @@ export function compileRendererJs(done) {
 export function compilePlugins(done) {
     webpack({
         mode: __DEV__ ? 'development' : 'production',
-        target: "electron-renderer",
+        target: 'electron-renderer',
         watch: __DEV__,
         context: paths.src.plugins,
         entry: {
@@ -297,11 +297,11 @@ export function compilePlugins(done) {
             }: {})
         },
         output: {
-            filename: "[name].js",
+            filename: '[name].js',
             path: paths.compiled.plugins,
             libraryTarget: 'commonjs-module',
         },
-        devtool: __DEV__ ? "#source-map" : 'none',
+        devtool: __DEV__ ? '#source-map' : 'none',
         externals: [
             (ctx, request, callback) => {
                 if (request !== 'delir-core') return callback()
@@ -314,7 +314,7 @@ export function compilePlugins(done) {
         ],
         resolve: {
             extensions: ['.js', '.ts'],
-            modules: ["node_modules"],
+            modules: ['node_modules'],
         },
         module: {
             rules: [

@@ -6,7 +6,7 @@
         "resolveJsonModule": true
     },
     "files": [
-        "./src/index",
+        "./src/index.ts",
         "./src/declarations.d.ts"
     ]
 }

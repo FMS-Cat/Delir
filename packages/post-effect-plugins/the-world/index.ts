@@ -1,10 +1,8 @@
 import {
-    PluginSupport,
     PostEffectBase,
     PreRenderRequest,
     RenderRequest,
     Type,
-    Values
 } from '@ragg/delir-core'
 
 import * as clamp from 'lodash/clamp'

@@ -11,7 +11,7 @@ export const loadPlugins = operation(async (context) => {
     const loader = new FSPluginLoader()
 
     const loaded = [
-        // await loader.loadPackageDir(join(remote.app.getAppPath(), '/plugins')),
+        await loader.loadPackageDir(join(remote.app.getAppPath(), '/plugins')),
         await loader.loadPackageDir(join(userDir, '/delir/plugins')),
     ]
 

@@ -3,7 +3,7 @@ import * as _ from 'lodash'
 import { Asset, Clip, Composition, Effect, Keyframe, Layer, Project } from './Entity'
 import { AssetPointer, ColorRGB, ColorRGBA, Expression } from './Values'
 
-const typeMap = {
+const typeMap: { [mark: string]: any } = {
     'entity:Asset': Asset,
     'entity:Clip': Clip,
     'entity:Composition': Composition,
@@ -17,7 +17,7 @@ const typeMap = {
     'value:Expression': Expression,
 }
 
-const serializeJSONNode = (node: any) => {
+const serializeJSONNode = (node: any): any => {
     if (
         typeof node === 'boolean'
         || typeof node === 'number'
@@ -32,7 +32,7 @@ const serializeJSONNode = (node: any) => {
     }
 
     for (const label of Object.keys(typeMap)) {
-        if (node instanceof typeMap[label]) {
+        if (typeMap[label] && node instanceof typeMap[label]) {
             return {
                 __type: label,
                 __value: _.mapValues(node, serializeJSONNode),
@@ -45,7 +45,7 @@ const serializeJSONNode = (node: any) => {
     }
 }
 
-const deserializeJSONNode = (node: any) => {
+const deserializeJSONNode = (node: any): any => {
     if (
         typeof node === 'boolean'
         || typeof node === 'number'
