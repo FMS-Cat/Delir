@@ -259,7 +259,7 @@ ProjectHelper.addClip(p, layer5, videoClip)
 // Effects
 //
 ProjectHelper.addEffect(p, adjustmentClip, assign(new Delir.Entity.Effect(), {
-    processor: '@ragg/delir-posteffect-chromakey',
+    processor: '@ragg/delir-posteffect-gaussian-blur',
     // keyframes: {
     //     color: [
     //         assign(new Delir.Entity.Keyframe(), {

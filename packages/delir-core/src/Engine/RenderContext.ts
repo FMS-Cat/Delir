@@ -4,6 +4,7 @@ import { Composition } from '../Entity'
 import DependencyResolver from './DependencyResolver'
 import { RealParameterValueTypes } from './Engine'
 import PreRenderContext from './PreRenderContext'
+import WebGLContext from './WebGL/WebGLContext'
 
 export default class RenderContext<T = {[propName: string]: RealParameterValueTypes}>
 {
@@ -42,6 +43,7 @@ export default class RenderContext<T = {[propName: string]: RealParameterValueTy
     private static _permitOnlyInitializeKey = [
         'rootComposition',
         'resolver',
+        'gl',
     ]
 
     //
@@ -91,6 +93,9 @@ export default class RenderContext<T = {[propName: string]: RealParameterValueTy
     //
     public readonly resolver: DependencyResolver
 
+    // WebGL
+    public readonly gl: WebGLContext
+
     // alias
     public get seconds(): number { return this.time }
 
@@ -129,6 +134,7 @@ export default class RenderContext<T = {[propName: string]: RealParameterValueTy
             parameters: this.parameters,
 
             resolver: this.resolver,
+            gl: this.gl,
         })
     }
 }

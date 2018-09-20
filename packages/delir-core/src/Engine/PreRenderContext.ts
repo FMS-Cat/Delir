@@ -3,6 +3,7 @@ import * as _ from 'lodash'
 import { Composition } from '../Entity'
 import { ParameterValueTypes } from '../PluginSupport/type-descriptor'
 import DependencyResolver from './DependencyResolver'
+import WebGLContext from './WebGL/WebGLContext'
 
 export default class PreRenderContext<T = {[propName: string]: ParameterValueTypes}>
 {
@@ -26,6 +27,7 @@ export default class PreRenderContext<T = {[propName: string]: ParameterValueTyp
     private static _permitOnlyInitializeKey = [
         'rootComposition',
         'resolver',
+        'gl',
     ]
 
     //
@@ -58,6 +60,9 @@ export default class PreRenderContext<T = {[propName: string]: ParameterValueTyp
     // Resolver
     //
     public resolver: DependencyResolver
+
+    // WebGL
+    public readonly gl: WebGLContext
 
     constructor(properties: Partial<PreRenderContext<T>> = {})
     {

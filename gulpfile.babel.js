@@ -287,6 +287,7 @@ export function compilePlugins(done) {
         context: paths.src.plugins,
         entry: {
             'the-world/index': './the-world/index',
+            'gaussian-blur/index': './gaussian-blur/index',
             ...(__DEV__ ? {
                 // 'chromakey/index': '../experimental-plugins/chromakey/index',
                 // 'filler/index': '../experimental-plugins/filler/index',
