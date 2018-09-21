@@ -383,14 +383,13 @@ export default class Engine
         const audioRenderStartRangeFrame = audioBufferingSizeTime * req.framerate
 
         for (const layerTask of layerRenderTasks) {
-            const layerBufferCanvas = document.createElement('canvas') as HTMLCanvasElement
+            const layerBufferCanvas = document.createElement('canvas')
             layerBufferCanvas.width = req.width
             layerBufferCanvas.height = req.height
 
             const layerBufferCanvasCtx = layerBufferCanvas.getContext('2d')!
 
-            // SPEC: The rendering order of the same layer at the same time is not defined.
-            //       In the future, want to ensure that there are no more than two clips in a single layer at a given time.
+            // SPEC: The rendering order of the clip in one layer in same time is not defined.
             const renderTargetClips = layerTask.clips.filter(clip => {
                 if (req.isAudioBufferingNeeded && clip.rendererType === 'audio') {
                     return clip.clipPlacedFrame <= (req.frameOnComposition + audioRenderStartRangeFrame)
@@ -403,7 +402,7 @@ export default class Engine
 
             // Render clips
             for (const clipTask of renderTargetClips) {
-                const clipBufferCanvas = document.createElement('canvas') as HTMLCanvasElement
+                const clipBufferCanvas = document.createElement('canvas')
                 clipBufferCanvas.width = req.width
                 clipBufferCanvas.height = req.height
 
